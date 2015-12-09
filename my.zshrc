@@ -127,3 +127,5 @@ alias dev="cd ~/Documents/Development"
 # TODO format this to look pretty
 alias mem="df -h /"
 alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
+# the thing that updates my .zshrc and pushes it to my github!
+alias zpush="/Users/calebadams/Documents/Development/PiePieNinja.zshrc/update.sh"
