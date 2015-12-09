@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Updating..."
+rm my.zshrc
+cp ~/.zshrc my.zshrc
+echo "DONE!"
+git add --all
+git commit -am "standard update"
+git push

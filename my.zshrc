@@ -122,7 +122,7 @@ alias snow="/Users/calebadams/Documents/Development/PhantomMercenary/src/shell/s
 # for the lolz
 alias doit="/Users/calebadams/Documents/Development/gistDoIt/JustDoIt.sh"
 # moves to the dev folder!!!!
-alias dev="~/Documents/Development"
+alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
 # TODO format this to look pretty
 alias mem="df -h /"
