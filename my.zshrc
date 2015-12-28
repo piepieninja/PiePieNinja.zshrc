@@ -96,6 +96,62 @@ catz () {
     cat $* | lolcat
 }
 
+emp () {
+    # clear no matter what
+    cd ~
+    clear
+
+    # check that Trash is not empyt
+    if [ "$(ls -A ~/.Trash/)" ]; then
+	tput cup 0 0
+	echo "removing files from Trash"
+	chflags -R nouchg *
+	sleep 1
+	tput cup 0 25
+	echo "."
+	sleep 1
+	tput cup 0 26
+	echo "."
+	sleep 1
+	tput cup 0 27
+	echo "."
+
+	rm ~/.Trash/*
+	tput cup 1 0
+	sleep 1
+	echo "DONE!"
+    else
+	tput cup 0 0
+	echo "Trash is already empty!"
+    fi
+
+    # check that Downloads is not empty
+    if [ "$(ls -A ~/Downloads/)" ]; then
+	tput cup 2 0
+	echo "removing files from Downloads"
+	tput cup 2 28
+	sleep 1
+	tput cup 2 29
+	echo "."
+	sleep 1
+	tput cup 2 30
+	echo "."
+	sleep 1
+	tput cup 2 31
+	echo "."
+
+	sleep 1
+	tput cup 3 0
+	rm ~/Downloads/*
+	echo "DONE!"
+    else
+	tput cup 3 0
+	echo "Downloads is already empty!"
+    fi
+
+    tput cup 5 0
+}
+
 # ==== alias ====
 # start emacs
 alias e="emacs"
@@ -125,7 +181,10 @@ alias doit="/Users/calebadams/Documents/Development/gistDoIt/JustDoIt.sh"
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
 # TODO format this to look pretty
-alias mem="df -h /"
+alias mem="pwd;du -hs"
+alias umem="df -h /"
 alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
 # the thing that updates my .zshrc and pushes it to my github!
 alias zpush="/Users/calebadams/Documents/Development/PiePieNinja.zshrc/update.sh"
+# for nicely emptying out all the stuff that I don't want
+alias empty="emp"
