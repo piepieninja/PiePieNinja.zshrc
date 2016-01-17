@@ -228,9 +228,10 @@ customsettings () {
 # ==== alias ====
 # start emacs
 alias e="emacs"
-# edit zshell stuff and easily go to config
+# edit zshell stuff and easily go to config. for updating the zshell config
 alias ze="emacs ~/.zshrc"
 alias zconf="cd /Users/calebadams/Documents/Development/PiePieNinja.zshrc/"
+alias zload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # for stats
 alias stats="screenfetch"
 # for safety
@@ -258,5 +259,3 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="/Users/calebadams/Documents/Development/PiePieNinja.zshrc/update.sh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
-#for updating the zshell config
-alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
