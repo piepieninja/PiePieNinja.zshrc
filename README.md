@@ -69,4 +69,4 @@ $ snow
 
 ### Author: Caleb Adams
 #### [CalebDevelops.com](https://calebdevelops.com "CalebDevelops.com")
-#### [Spacey.io](https://spacey.io "Spacey Sciences - Spacey.io")
+#### [Spacey.io](http://spacey.io "Spacey Sciences - Spacey.io")
