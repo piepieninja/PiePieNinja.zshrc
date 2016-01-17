@@ -3,7 +3,7 @@
 #### Tutorials and Posts:
 
 * [custom GUI post](http://computersciencetumbld.tumblr.com/post/132559487676/so-i-customized-my-mac-today-for-the-gui-i#notes "custom GUI")
-* [tumblr]( "terminal goodies")
+* [terminal tools and custom settings](http://computersciencetumbld.tumblr.com/post/137505524011/some-more-mac-unix-customization-today-i#notes "terminal goodies")
 
 ### Added Functions
 To update your zshell config after it has been edited, and to add a custom commit message to it just type: 
