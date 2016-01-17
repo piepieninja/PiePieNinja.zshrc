@@ -152,11 +152,85 @@ emp () {
     tput cup 5 0
 }
 
+customsettings () {
+
+    # Thanks https://gist.github.com/brandonb927
+    
+    echo ""
+    echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
+    sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+    echo ""
+    echo "Turn off keyboard illumination when computer is not used for 10 minutes"
+    defaults write com.apple.BezelServices kDimTime -int 600
+    
+    echo ""
+    echo "Disable keyboard from automatically adjusting backlight brightness in low light? (y/n)"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	sudo defaults write /Library/Preferences/com.apple.iokit.AmbientLightSensor "Automatic Keyboard Enabled" -bool false
+    fi
+
+    echo ""
+    echo "Show hidden files in Finder by default? (y/n)"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	defaults write com.apple.Finder AppleShowAllFiles -bool true
+    fi
+
+    echo ""
+    echo "Show all filename extensions in Finder by default? (y/n)"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+    fi
+
+    echo ""
+    echo "Disable the warning when changing a file extension? (y/n)"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    fi
+
+    echo ""
+    echo "Use column view in all Finder windows by default? (y/n)"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	defaults write com.apple.finder FXPreferredViewStyle Clmv
+    fi
+
+    echo ""
+    echo "Where do you want screenshots to be stored? (hit ENTER if you want ~/Desktop as default)"
+    # Thanks https://github.com/omgmog
+    read screenshot_location
+    echo ""
+    if [ -z "${screenshot_location}" ]
+    then
+	# If nothing specified, we default to ~/Desktop
+	screenshot_location="${HOME}/Desktop"
+    else
+	# Otherwise we use input
+	if [[ "${screenshot_location:0:1}" != "/" ]]
+	then
+	    # If input doesn't start with /, assume it's relative to home
+	    screenshot_location="${HOME}/${screenshot_location}"
+	fi
+    fi
+    echo "Setting location to ${screenshot_location}"
+    defaults write com.apple.screencapture location -string "${screenshot_location}"
+
+    echo "Applying Custom Settings..."
+
+    killall SystemUIServer
+    
+}
+
 # ==== alias ====
 # start emacs
 alias e="emacs"
-# edit zshell stuff
+# edit zshell stuff and easily go to config
 alias ze="emacs ~/.zshrc"
+alias zconf="cd /Users/calebadams/Documents/Development/PiePieNinja.zshrc/"
 # for stats
 alias stats="screenfetch"
 # for safety
@@ -184,3 +258,5 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="/Users/calebadams/Documents/Development/PiePieNinja.zshrc/update.sh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
+#for updating the zshell config
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"

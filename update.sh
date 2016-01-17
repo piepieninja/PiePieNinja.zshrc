@@ -4,6 +4,8 @@ rm /Users/calebadams/Documents/Development/PiePieNinja.zshrc/my.zshrc
 cp ~/.zshrc /Users/calebadams/Documents/Development/PiePieNinja.zshrc/my.zshrc
 cd /Users/calebadams/Documents/Development/PiePieNinja.zshrc/
 git add --all
-git commit -am "standard automatic backup/update"
+echo ">> Enter A Commit Message:" | lolcat
+read commitmessage
+git commit -am "${commitmessage}"
 git push
 echo "DONE!" | lolcat
