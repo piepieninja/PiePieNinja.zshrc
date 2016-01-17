@@ -1,9 +1,39 @@
-# Custom Zshell for Mac OSX 
+# Custom Zshell for Mac OSX 10.10.*
 
 #### Tutorials and Posts:
 
-* [tumblr]( "custom GUI")
+* [custom GUI post](http://computersciencetumbld.tumblr.com/post/132559487676/so-i-customized-my-mac-today-for-the-gui-i#notes "custom GUI")
 * [tumblr]( "terminal goodies")
+
+### Added Functions
+To update your zshell config after it has been edited, and to add a custom commit message to it just type: 
+```bash
+$ zpush
+```
+To edit your .zshrc file with your favorite editor simply type:
+```bash
+$ ze
+```
+To refresh and reload zshell with your new configurations type:
+```bash
+$ zload
+```
+To move into the Git Repository that holds your custom zshell code type:
+```bash
+$ zconf
+```
+To go begin adding custom settings and go into the custom setting prompt simply type:
+```bash
+$ customsettings
+```
+To view a train endlessly type:
+```bash
+$ train
+```
+To make it snow inside of your terminal type:
+```bash
+$ snow
+```
 
 ## Dependencies: 
 
@@ -15,7 +45,7 @@
 * [lolcat](https://github.com/busyloop/lolcat "lolcat") (gem install)
 * [Ruby](https://github.com/ruby/ruby "ruby") (brew install)
 
-## Reccomended:
+## Recommended:
 
 * [htop](https://github.com/hishamhm/htop "htop") (brew install)
 * [cask](https://github.com/caskroom/homebrew-cask "cask") (brew install)
@@ -29,10 +59,10 @@
 
 ### With All Programs Installed:
 #### The Themes can be customized other than this, but this is what your mac could look like.
-![windows and terminal](/img/windows.png "Windows and Terminal")
+![windows and terminal](/img/terminal.png "Windows and Terminal")
+![windows](/img/windows.png "The Terminal")
 ![the dock](/img/dock.png "The Dock")
 ![windows](/img/finder.png "The Finder")
-![windows](/img/terminal.png "The Terminal")
 
 ### Author: Caleb Adams
 #### [CalebDevelops.com](https://calebdevelops.com "CalebDevelops.com")
