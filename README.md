@@ -1,2 +1,14 @@
-# CALEB's .zshrc backup!
-wow I hope I don't ever have to use this
+# A Repo for .zshrc backup and customization
+
+## Dependencies: 
+
+* screenfetch
+* sl
+* lolcat
+* htop
+
+## Reccomended:
+
+* brew
+
+### Author: Caleb Adams

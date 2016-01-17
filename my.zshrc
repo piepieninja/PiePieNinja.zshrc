@@ -191,12 +191,17 @@ customsettings () {
     
 }
 
+# ==== Custom Variables ====
+# change this path so that it points to the git repository
+REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
+export REPO_PATH
+
 # ==== alias ====
 # start emacs
 alias e="emacs"
 # edit zshell stuff and easily go to config. for updating the zshell config
-alias ze="emacs ~/.zshrc"
-alias zconf="cd /Users/calebadams/Documents/Development/PiePieNinja.zshrc/"
+alias ze="emacs ~/.zshrc" # change this to your favorite editor
+alias zconf="cd ${REPO_PATH}"
 alias zload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # for stats
 alias stats="screenfetch"
@@ -211,9 +216,9 @@ alias pretty="clear;screenfetch;date | lolcat;cal | lolcat;"
 # choo choo
 alias train="while true; do; sl; done;"
 # merry christmas
-alias snow="/Users/calebadams/Documents/Development/PhantomMercenary/src/shell/snow.sh"
+alias snow="${REPO_PATH}/snow.sh"
 # for the lolz
-alias doit="/Users/calebadams/Documents/Development/gistDoIt/JustDoIt.sh"
+alias doit="${REPO_PATH}/JustDoIt.sh"
 # moves to the dev folder!!!!
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
@@ -222,6 +227,6 @@ alias mem="pwd;du -hs"
 alias umem="df -h /"
 alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
 # the thing that updates my .zshrc and pushes it to my github!
-alias zpush="/Users/calebadams/Documents/Development/PiePieNinja.zshrc/update.sh"
+alias zpush="${REPO_PATH}/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
