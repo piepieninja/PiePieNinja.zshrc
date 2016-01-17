@@ -163,10 +163,6 @@ alias stats="screenfetch"
 alias rm="rm -i"
 # for the lolz and the catz
 alias cat="catz"
-#just because I love the stats
-#alias clear="clear;screenfetch; date | lolcat; cal | lolcat;"
-# because htop is cooler
-#alias top="htop"
 # clean all the things because I do this all the time
 alias cl="rm *~"
 # bring the pretty things back
