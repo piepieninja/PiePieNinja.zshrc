@@ -97,59 +97,25 @@ catz () {
 }
 
 emp () {
-    # clear no matter what
-    cd ~
-    clear
 
     # check that Trash is not empyt
-    if [ "$(ls -A ~/.Trash/)" ]; then
-	tput cup 0 0
-	echo "removing files from Trash"
-	chflags -R nouchg *
-	sleep 1
-	tput cup 0 25
-	echo "."
-	sleep 1
-	tput cup 0 26
-	echo "."
-	sleep 1
-	tput cup 0 27
-	echo "."
-
-	rm ~/.Trash/*
-	tput cup 1 0
-	sleep 1
-	echo "DONE!"
+    if [ "$(ls -A ~/.Trash/*)" ]; then
+	echo "removing files from Trash ..." | lolcat
+	# chflags -R nouchg *
+	rm -rf ~/.Trash/*
+	echo "DONE!" | lolcat
     else
-	tput cup 0 0
-	echo "Trash is already empty!"
+	echo "Trash is already empty!" | lolcat
     fi
 
     # check that Downloads is not empty
-    if [ "$(ls -A ~/Downloads/)" ]; then
-	tput cup 2 0
-	echo "removing files from Downloads"
-	tput cup 2 28
-	sleep 1
-	tput cup 2 29
-	echo "."
-	sleep 1
-	tput cup 2 30
-	echo "."
-	sleep 1
-	tput cup 2 31
-	echo "."
-
-	sleep 1
-	tput cup 3 0
-	rm ~/Downloads/*
-	echo "DONE!"
+    if [ "$(ls -A ~/Downloads/*)" ]; then
+	echo "removing files from Downloads" | lolcat
+	rm -rf ~/Downloads/*
+	echo "DONE!" | lolcat
     else
-	tput cup 3 0
-	echo "Downloads is already empty!"
+	echo "Downloads is already empty!" | lolcat
     fi
-
-    tput cup 5 0
 }
 
 customsettings () {
