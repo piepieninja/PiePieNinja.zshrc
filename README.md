@@ -35,7 +35,10 @@ To make it snow inside of your terminal type:
 $ snow
 ```
 
+
 ## Dependencies: 
+
+   You must change the $REPO_PATH variable to point to your github repository!
 
 * [homebrew](http://brew.sh/ "brew")
 * [gem](http://guides.rubygems.org/rubygems-basics/ "gem")
