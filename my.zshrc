@@ -194,7 +194,10 @@ customsettings () {
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
+DEV_PATH="~/Documents/Development"
+# export them all!
 export REPO_PATH
+export DEV_PATH
 
 # ==== alias ====
 # start emacs
