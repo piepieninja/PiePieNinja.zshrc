@@ -204,6 +204,7 @@ export DEV_PATH
 alias e="emacs"
 # edit zshell stuff and easily go to config. for updating the zshell config
 alias ze="emacs ~/.zshrc" # change this to your favorite editor
+alias zt="emacs ~/.oh-my-zsh/themes/piepieninja.zsh-theme"
 alias zconf="cd ${REPO_PATH}"
 alias zload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # for stats
@@ -233,3 +234,5 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
+# for battery stats
+alias battery="pmset -g batt"

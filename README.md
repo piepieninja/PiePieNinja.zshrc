@@ -14,6 +14,10 @@ To edit your .zshrc file with your favorite editor simply type:
 ```bash
 $ ze
 ```
+Te edit your .zsh-theme and customize it willie nillie type:
+```bash
+$ zt
+```
 To refresh and reload zshell with your new configurations type:
 ```bash
 $ zload
@@ -35,6 +39,7 @@ To make it snow inside of your terminal type:
 $ snow
 ```
 
+<i>note: editing files assumes emacs. This may change at a later date.</i>
 
 ## Dependencies: 
 
