@@ -52,6 +52,7 @@ $ snow
 * [sl](https://github.com/mtoyoda/sl "sl") (brew install)
 * [lolcat](https://github.com/busyloop/lolcat "lolcat") (gem install)
 * [Ruby](https://github.com/ruby/ruby "ruby") (brew install)
+* [colorize](https://github.com/fazibear/colorize "colorize")(gem install)
 
 ## Recommended:
 

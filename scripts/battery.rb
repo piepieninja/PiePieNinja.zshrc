@@ -15,4 +15,7 @@
 # used for the piepieninja.zsh-theme, but could be used for any theme or other script.
 ##
 
-puts "hello world"
+input = ARGV[0]
+
+if input.inculde? ""
+
