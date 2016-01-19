@@ -1,5 +1,7 @@
 #!/bin/zsh
 echo "Updating..." | lolcat
+cd ${REPO_PATH}
+git pull
 # >> NOTE <<
 # REPO_PATH is defined in the .zshrc file and must be changed to point to your repo 
 echo "Path to Github Repo: ${REPO_PATH}"
