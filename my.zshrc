@@ -219,9 +219,9 @@ alias pretty="clear;screenfetch;date | lolcat;cal | lolcat;"
 # choo choo
 alias train="while true; do; sl; done;"
 # merry christmas
-alias snow="${REPO_PATH}/snow.sh"
+alias snow="${REPO_PATH}/scripts/snow.sh"
 # for the lolz
-alias doit="${REPO_PATH}/JustDoIt.sh"
+alias doit="${REPO_PATH}/scripts/JustDoIt.sh"
 # moves to the dev folder!!!!
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
@@ -230,6 +230,6 @@ alias mem="pwd;du -hs"
 alias umem="df -h /"
 alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
 # the thing that updates my .zshrc and pushes it to my github!
-alias zpush="${REPO_PATH}/update.zsh"
+alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
