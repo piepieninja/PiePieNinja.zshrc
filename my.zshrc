@@ -6,8 +6,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="piepieninja"
+# === dallas is fav
 # === bira is good
 # === crunch is great
+
+# enable option for dynamic prompt 
+setopt prompt_subst
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -85,6 +89,7 @@ fi
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/
 
 # show this awesome thing every time it opens:
+wait 5
 clear
 screenfetch
 date | lolcat
@@ -191,17 +196,6 @@ customsettings () {
     
 }
 
-#=== this prints the battery ussage nicely
-#battery (){
-    # for battery stats (just here for testing themes)
-#    batt="pmset -g batt"
-#    pmset -g batt
-#    BATT_TEMP="${pmset -g batt}"
-#    echo "BATT_TEMP"
-#    echo "${pmset -g batt}"
-#    PIEPIENINJA_BATTERY_="$(${REPO_PATH}/scripts/battery.rb ${BATT_TEMP})"
-#}
-
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
@@ -245,5 +239,4 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
-# testing for custom prompt
-alias battery="pmset -g batt"
+

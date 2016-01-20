@@ -17,13 +17,13 @@
 
 require 'colorize'
 
-input = ARGV[0]
+cmd = "pmset -g batt"
+input = `#{cmd}`
+#input = ARGV[0]
+#puts "input: " << input 
 output = ""
 
 isCharging = FALSE
-
-#puts "input: " << input
-#puts String.colors
 
 #is it charging?
 if input.include? "discharging"
@@ -33,18 +33,18 @@ else
 end
 
 #find the battery charge!
-
 percent = 0
 (0..input.length).each do |i|
   if input[i] == '%'
     percent = input[i-3..i].to_i
-    #puts percent
-    #break
   end
 end
 
 # generate graphic!
 length = 10
+if percent == 99
+  percent = 100
+end
 greenBars = percent/length
 output << "[".white
 i = 0

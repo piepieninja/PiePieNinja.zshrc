@@ -1,10 +1,9 @@
 # PIEPIENINJA!!!!!
 
 # Grab the battery life!
-BATT_STAT="$(battery)"
-setopt promptsubst
-PIEPIENINJA_BATTERY_="$(${REPO_PATH}/scripts/battery.rb ${BATT_STAT})"
-setopt promptsubst
+function BATTERY(){
+echo `${REPO_PATH}/scripts/battery.rb`
+}
 
 # Grab the time (%t) wrapped in {}: {%t}
 # uncomment to go back# DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%D %T%{$fg[white]%}}%{$reset_color%}"
@@ -30,9 +29,7 @@ DALLAS_CURRENT_LOCA_="%{$fg[cyan]%}%~\$(git_prompt_info)%{$reset_color%}\$(parse
 DALLAS_CURRENT_USER_="%{$fg[red]%}%n%{$reset_color%}"
 
 # Use a % for normal users and a # for privelaged (root) users.
-DALLAS_PROMPT_CHAR_="%{$fg[white]%}%(!.#.%%)%{$reset_color%}"
-
-
+DALLAS_PROMPT_CHAR_="%{$fg[white]%}%(!.#. %{$fg[blue]%}○)%{$reset_color%}"
 
 #========GIT========#
 # For the git prompt, use a white @ and blue text for the branch name
@@ -48,4 +45,5 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}✗"
 
 # Put it all together!
-PROMPT="$PIEPIENINJA_BATTERY_$DALLAS_CURRENT_TIME_$DALLAS_CURRENT_MACH_$DALLAS_CURRENT_LOCA_ $DALLAS_CURRENT_USER_$DALLAS_PROMPT_CHAR_ "
+PROMPT="$(BATTERY)$DALLAS_CURRENT_TIME_$DALLAS_CURRENT_MACH_$DALLAS_CURRENT_LOCA_ $DALLAS_CURRENT_USER_$DALLAS_PROMPT_CHAR_ "
+#RPROMPT="$(BATTERY)"
