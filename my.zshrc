@@ -191,6 +191,17 @@ customsettings () {
     
 }
 
+#=== this prints the battery ussage nicely
+#battery (){
+    # for battery stats (just here for testing themes)
+#    batt="pmset -g batt"
+#    pmset -g batt
+#    BATT_TEMP="${pmset -g batt}"
+#    echo "BATT_TEMP"
+#    echo "${pmset -g batt}"
+#    PIEPIENINJA_BATTERY_="$(${REPO_PATH}/scripts/battery.rb ${BATT_TEMP})"
+#}
+
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
@@ -234,5 +245,5 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
-# for battery stats
+# testing for custom prompt
 alias battery="pmset -g batt"

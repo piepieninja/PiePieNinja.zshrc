@@ -15,7 +15,51 @@
 # used for the piepieninja.zsh-theme, but could be used for any theme or other script.
 ##
 
+require 'colorize'
+
 input = ARGV[0]
+output = ""
 
-if input.inculde? ""
+isCharging = FALSE
 
+#puts "input: " << input
+#puts String.colors
+
+#is it charging?
+if input.include? "discharging"
+  isCharging = FALSE
+else
+  isCharging = TRUE
+end
+
+#find the battery charge!
+
+percent = 0
+(0..input.length).each do |i|
+  if input[i] == '%'
+    percent = input[i-3..i].to_i
+    #puts percent
+    #break
+  end
+end
+
+# generate graphic!
+length = 10
+greenBars = percent/length
+output << "[".white
+i = 0
+
+while i < length
+  if i < greenBars
+    output << "|".green
+  else
+    output << "|".red
+  end
+  i = i + 1
+end
+output << "]".white
+if isCharging
+  output << "{".magenta << "++".green << "}".magenta
+end
+
+puts output
