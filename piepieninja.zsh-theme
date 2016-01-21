@@ -46,8 +46,14 @@ function BATTERY(){
 ${REPO_PATH}/scripts/battery.rb
 }
 
+function GIT_PROMPT(){
+git_prompt_info
+}
+
+function GIT_STATUS(){
+parse_git_dirty
+}
+
 # Put it all together!
 setopt promptsubst
-PROMPT='$(BATTERY)$CURRENT_TIME_%{$fg[cyan]%}%d %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
-#PROMPT="$CURRENT_TIME_$DALLAS_CURRENT_MACH_$DALLAS_CURRENT_LOCA_ $DALLAS_CURRENT_USER_$DALLAS_PROMPT_CHAR_ "
-#RPROMPT="$(BATTERY)"
+PROMPT='$(BATTERY)$CURRENT_TIME_%{$fg[cyan]%}%d$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
