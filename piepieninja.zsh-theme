@@ -4,29 +4,7 @@
 
 # Grab the time (%t) wrapped in {}: {%t}
 # uncomment to go back# DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%D %T%{$fg[white]%}}%{$reset_color%}"
-CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%t%{$fg[white]%}}%{$reset_color%}"
-
-# Grab the current version of ruby in use (via RVM): [ruby-1.8.7]
-#if [ -e ~/.rvm/bin/rvm-prompt ]; then
-#  DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(~/.rvm/bin/rvm-prompt i v)%{$fg[white]%}]%{$reset_color%}"
-#else
-#  if which rbenv &> /dev/null; then
-#    DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
-#  fi
-#fi
-
-# Grab the current machine name: muscato
-DALLAS_CURRENT_MACH_="%{$fg[green]%}%m%{$fg[white]%}:%{$reset_color%}"
-
-# Grab the current filepath, use shortcuts: ~/Desktop
-# Append the current git branch, if in a git repository: ~aw@master
-DALLAS_CURRENT_LOCA_="%{$fg[cyan]%}%~\$(git_prompt_info)%{$reset_color%}\$(parse_git_dirty)"
-
-# Grab the current username: dallas
-DALLAS_CURRENT_USER_="%{$fg[red]%}%n%{$reset_color%}"
-
-# Use a % for normal users and a # for privelaged (root) users.
-DALLAS_PROMPT_CHAR_="%{$fg[white]%}%(!.#. %{$fg[blue]%}○)%{$reset_color%}"
+CURRENT_TIME="%{$fg[white]%}{%{$fg[yellow]%}%t%{$fg[white]%}}%{$reset_color%}"
 
 #========GIT========#
 # For the git prompt, use a white @ and blue text for the branch name
@@ -40,6 +18,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # Add 1 cyan ✗ if this branch is diiirrrty! Dirty branch!
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}✗"
+
+#=====functions=====#
 
 # Grab the battery life!
 function BATTERY(){
@@ -56,4 +36,4 @@ parse_git_dirty
 
 # Put it all together!
 setopt promptsubst
-PROMPT='$(BATTERY)$CURRENT_TIME_%{$fg[cyan]%}%d$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
+PROMPT='$(BATTERY)$CURRENT_TIME%{$fg[cyan]%}%d$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
