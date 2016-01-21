@@ -1,7 +1,5 @@
 # PIEPIENINJA!!!!!
 
-
-
 # Grab the time (%t) wrapped in {}: {%t}
 # uncomment to go back# DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%D %T%{$fg[white]%}}%{$reset_color%}"
 CURRENT_TIME="%{$fg[white]%}{%{$fg[yellow]%}%t%{$fg[white]%}}%{$reset_color%}"
@@ -34,6 +32,12 @@ function GIT_STATUS(){
 parse_git_dirty
 }
 
+function ITUNES(){
+${REPO_PATH}/scripts/itunes.sh
+}
+
 # Put it all together!
 setopt promptsubst
 PROMPT='$(BATTERY)$CURRENT_TIME%{$fg[cyan]%}%d$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
+#setopt promprsubst
+RPROMPT='%{$fg[white]%}[%{$fg[cyan]%}$(ITUNES)%{$fg[white]%}]%{$reset_color%}%}'

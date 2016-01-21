@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export LANG="en_US.UTF-8"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -12,6 +13,9 @@ ZSH_THEME="piepieninja"
 
 # enable option for dynamic prompt 
 setopt prompt_subst
+
+# So the the right prompte isn't padded
+ZLE_RPROMPT_INDENT=0
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
