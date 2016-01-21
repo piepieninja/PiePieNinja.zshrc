@@ -57,10 +57,16 @@ while i < length
   if i < greenBars
     output << "|".green
   else
-    if (percent % 10 > 5) and doYellow
-      output << "|".yellow
+    if (percent % 10 > 8) and doYellow
+      output << "|".light_yellow
       doYellow = FALSE
-    else
+    elsif (percent % 10 > 5) and doYellow
+      output << "|".light_yellow
+      doYellow = FALSE
+    elsif (percent % 10 > 3) and doYellow
+      output << "|".light_red
+      doYellow = FALSE
+    elsif
       output << "|".red
     end
   end
