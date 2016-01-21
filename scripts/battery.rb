@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 
 ##
 # Author: Caleb Adams
@@ -55,12 +56,12 @@ while i < length
     output << "|".green
   else
     if (percent % 10 > 8) and doYellow
+      output << "|".yellow
+      doYellow = FALSE
+    elsif (percent % 10 > 4) and doYellow
       output << "|".light_yellow
       doYellow = FALSE
-    elsif (percent % 10 > 5) and doYellow
-      output << "|".light_yellow
-      doYellow = FALSE
-    elsif (percent % 10 > 3) and doYellow
+    elsif (percent % 10 > 2) and doYellow
       output << "|".light_red
       doYellow = FALSE
     elsif
