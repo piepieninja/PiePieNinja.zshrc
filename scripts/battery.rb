@@ -49,11 +49,20 @@ greenBars = percent/length
 output << "[".white
 i = 0
 
+#percent = 76
+#puts String.colors
+
+doYellow = TRUE
 while i < length
   if i < greenBars
     output << "|".green
   else
-    output << "|".red
+    if (percent % 10 > 5) and doYellow
+      output << "|".yellow
+      doYellow = FALSE
+    else
+      output << "|".red
+    end
   end
   i = i + 1
 end

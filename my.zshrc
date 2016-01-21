@@ -94,6 +94,8 @@ clear
 screenfetch
 date | lolcat
 cal | lolcat
+#source ~/.zshrc
+#sleep 5
 
 # ==== shell functions ====
 # for the lolz

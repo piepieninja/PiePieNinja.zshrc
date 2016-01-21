@@ -1,22 +1,19 @@
 # PIEPIENINJA!!!!!
 
-# Grab the battery life!
-function BATTERY(){
-echo `${REPO_PATH}/scripts/battery.rb`
-}
+
 
 # Grab the time (%t) wrapped in {}: {%t}
 # uncomment to go back# DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%D %T%{$fg[white]%}}%{$reset_color%}"
-DALLAS_CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}time:%t%{$fg[white]%}}%{$reset_color%}"
+CURRENT_TIME_="%{$fg[white]%}{%{$fg[yellow]%}%t%{$fg[white]%}}%{$reset_color%}"
 
 # Grab the current version of ruby in use (via RVM): [ruby-1.8.7]
-if [ -e ~/.rvm/bin/rvm-prompt ]; then
-  DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(~/.rvm/bin/rvm-prompt i v)%{$fg[white]%}]%{$reset_color%}"
-else
-  if which rbenv &> /dev/null; then
-    DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
-  fi
-fi
+#if [ -e ~/.rvm/bin/rvm-prompt ]; then
+#  DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(~/.rvm/bin/rvm-prompt i v)%{$fg[white]%}]%{$reset_color%}"
+#else
+#  if which rbenv &> /dev/null; then
+#    DALLAS_CURRENT_RUBY_="%{$fg[white]%}[%{$fg[magenta]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$fg[white]%}]%{$reset_color%}"
+#  fi
+#fi
 
 # Grab the current machine name: muscato
 DALLAS_CURRENT_MACH_="%{$fg[green]%}%m%{$fg[white]%}:%{$reset_color%}"
@@ -44,6 +41,13 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 # Add 1 cyan ✗ if this branch is diiirrrty! Dirty branch!
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}✗"
 
+# Grab the battery life!
+function BATTERY(){
+${REPO_PATH}/scripts/battery.rb
+}
+
 # Put it all together!
-PROMPT="$(BATTERY)$DALLAS_CURRENT_TIME_$DALLAS_CURRENT_MACH_$DALLAS_CURRENT_LOCA_ $DALLAS_CURRENT_USER_$DALLAS_PROMPT_CHAR_ "
+setopt promptsubst
+PROMPT='$(BATTERY)$CURRENT_TIME_%{$fg[cyan]%}%d %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
+#PROMPT="$CURRENT_TIME_$DALLAS_CURRENT_MACH_$DALLAS_CURRENT_LOCA_ $DALLAS_CURRENT_USER_$DALLAS_PROMPT_CHAR_ "
 #RPROMPT="$(BATTERY)"
