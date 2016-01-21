@@ -38,6 +38,6 @@ ${REPO_PATH}/scripts/itunes.sh
 
 # Put it all together!
 setopt promptsubst
-PROMPT='$(BATTERY)$CURRENT_TIME%{$fg[cyan]%}%d$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
+PROMPT='$(BATTERY)$CURRENT_TIME%{$fg[cyan]%} %~$(GIT_PROMPT)$(GIT_STATUS) %{$fg[white]%}%(!.#.%{$fg[blue]%}○)%{$reset_color%} '
 #setopt promprsubst
-RPROMPT='%{$fg[white]%}[%{$fg[cyan]%}$(ITUNES)%{$fg[white]%}]%{$reset_color%}%}'
+#RPROMPT='%{$fg[white]%}[%{$fg[cyan]%}%{$(ITUNES)%}%{$fg[white]%}]%{$reset_color%}'

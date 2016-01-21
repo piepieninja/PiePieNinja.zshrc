@@ -15,7 +15,7 @@ ZSH_THEME="piepieninja"
 setopt prompt_subst
 
 # So the the right prompte isn't padded
-ZLE_RPROMPT_INDENT=0
+#ZLE_RPROMPT_INDENT=0
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
