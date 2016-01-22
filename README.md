@@ -67,6 +67,8 @@ $ snow
 * [custom icons](http://noshery.deviantart.com/art/Minimalist-White-Icons-Mac-OS-X-470738808 "Custom Minimal White Icons") (this same artist has many other great icon sets. Additional icons are included in the icons folder.)
 
 ### With All Programs Installed:
+#### With the included ruby scripts the terminal prompt will look like this, with a battery and itunes indicator:
+![custom prompt](/img/prompt.png "custom prompt")
 #### The Themes can be customized other than this, but this is what your mac could look like.
 ![windows and terminal](/img/terminal.png "Windows and Terminal")
 ![windows](/img/windows.png "The Terminal")
