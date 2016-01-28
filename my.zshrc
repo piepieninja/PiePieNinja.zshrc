@@ -59,8 +59,14 @@ plugins=(git thefuck)
 
 # User configuration
 
+# for python
 export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
+
+# for the free pascal compiler - http://www.toosquare.com/2014/07/install-pascal-on-os-x/
+#export PATH=/usr/local/bin:$PATH
+
+# for android adb
+export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
 source $ZSH/oh-my-zsh.sh
 
