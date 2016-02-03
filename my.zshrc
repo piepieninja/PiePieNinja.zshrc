@@ -11,7 +11,7 @@ ZSH_THEME="piepieninja"
 # === bira is good
 # === crunch is great
 
-# enable option for dynamic prompt 
+# enable option for dynamic prompt
 setopt prompt_subst
 
 # So the the right prompte isn't padded
@@ -67,6 +67,11 @@ export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bi
 
 # for android adb
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+
+# for the gmat software
+export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+#export PATH=/opt/local/bin
+#export PATH=/opt/local/sbin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -138,7 +143,7 @@ emp () {
 customsettings () {
 
     # Thanks https://gist.github.com/brandonb927
-    
+
     echo ""
     echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
     sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
@@ -146,7 +151,7 @@ customsettings () {
     echo ""
     echo "Turn off keyboard illumination when computer is not used for 10 minutes"
     defaults write com.apple.BezelServices kDimTime -int 600
-    
+
     echo ""
     echo "Disable keyboard from automatically adjusting backlight brightness in low light? (y/n)"
     read -r response
@@ -205,7 +210,7 @@ customsettings () {
     echo "Applying Custom Settings..."
 
     killall SystemUIServer
-    
+
 }
 
 # ==== Custom Variables ====
@@ -251,4 +256,3 @@ alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat;
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
 alias empty="emp"
-
