@@ -104,7 +104,7 @@ fi
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/
 
 # show this awesome thing every time it opens:
-wait 5
+wait 3
 clear
 screenfetch
 date | lolcat
