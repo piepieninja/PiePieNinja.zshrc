@@ -249,9 +249,9 @@ alias doit="${REPO_PATH}/scripts/JustDoIt.sh"
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
 # TODO format this to look pretty
-alias mem="pwd;du -hs"
-alias umem="df -h /"
-alias hmem="df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
+alias mem="pwd;sudo du -hs"
+alias umem="sudo df -h /"
+alias hmem="sudo df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
 # the thing that updates my .zshrc and pushes it to my github!
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
