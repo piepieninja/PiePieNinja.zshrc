@@ -119,8 +119,7 @@ catz () {
 }
 
 emp () {
-
-    # check that Trash is not empyt
+    # check that Trash is not empty
     if [ "$(ls -A ~/.Trash/*)" ]; then
 	echo "removing files from Trash ..." | lolcat
 	# chflags -R nouchg *
@@ -137,6 +136,18 @@ emp () {
 	echo "DONE!" | lolcat
     else
 	echo "Downloads is already empty!" | lolcat
+    fi
+}
+
+emp2 () {
+    # check that Trash is not empty
+    if [ "$(ls -A ~/.Trash/*)" ]; then
+        echo "removing files from Trash ..." | lolcat
+        # chflags -R nouchg * 
+	rm -rf ~/.Trash/*
+        echo "DONE!" | lolcat
+    else
+        echo "Trash is already empty!" | lolcat
     fi
 }
 
@@ -255,4 +266,5 @@ alias hmem="sudo df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lo
 # the thing that updates my .zshrc and pushes it to my github!
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want
-alias empty="emp"
+alias empty="emp2"
+alias emptyall="emp"
