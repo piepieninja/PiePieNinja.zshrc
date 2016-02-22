@@ -11,9 +11,6 @@ ZSH_THEME="piepieninja"
 # === bira is good
 # === crunch is great
 
-# enable option for dynamic prompt
-setopt prompt_subst
-
 # So the the right prompte isn't padded
 #ZLE_RPROMPT_INDENT=0
 
