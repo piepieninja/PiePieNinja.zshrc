@@ -67,8 +67,6 @@ export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
 # for the gmat software
 export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-#export PATH=/opt/local/bin
-#export PATH=/opt/local/sbin
 
 source $ZSH/oh-my-zsh.sh
 
