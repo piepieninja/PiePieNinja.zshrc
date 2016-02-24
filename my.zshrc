@@ -246,7 +246,7 @@ alias cl="rm *~"
 # bring the pretty things back
 alias pretty="clear;screenfetch;date | lolcat;cal | lolcat;"
 # choo choo
-alias train="while true; do; sl; done;"
+alias train="say 'choo choo';while true; do; sl; done;"
 # merry christmas
 alias snow="${REPO_PATH}/scripts/snow.sh"
 # for the lolz
