@@ -59,6 +59,9 @@ plugins=(git thefuck)
 # for python
 export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
 
+# adds brew to the exports
+export PATH="/usr/local/sbin:$PATH"
+
 # for the free pascal compiler - http://www.toosquare.com/2014/07/install-pascal-on-os-x/
 #export PATH=/usr/local/bin:$PATH
 
