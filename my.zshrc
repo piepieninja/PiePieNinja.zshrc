@@ -261,12 +261,14 @@ alias doit="${REPO_PATH}/scripts/JustDoIt.sh"
 # moves to the dev folder!!!!
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
-# TODO format this to look pretty
+# TODO format this to look pretty - build these into functinos
 alias mem="pwd;sudo du -hs"
 alias umem="sudo df -h /"
 alias hmem="sudo df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
 # the thing that updates my .zshrc and pushes it to my github!
 alias zpush="${REPO_PATH}/scripts/update.zsh"
-# for nicely emptying out all the stuff that I don't want
+# for nicely emptying out all the stuff that I don't want - build these into functions
 alias empty="emp2"
 alias emptyall="emp"
+# say hi
+alias hi="say hi"
