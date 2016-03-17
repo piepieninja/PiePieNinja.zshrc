@@ -7,9 +7,7 @@ export LANG="en_US.UTF-8"
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="piepieninja"
-# === dallas is fav
-# === bira is good
-# === crunch is great
+# === the piepieninja theme is based on the dallas theme
 
 # So the the right prompte isn't padded
 #ZLE_RPROMPT_INDENT=0
