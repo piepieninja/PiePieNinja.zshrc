@@ -102,7 +102,6 @@ fi
 
 # this is for LaTex or MacTex or something:
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/
-
 # show this awesome thing every time it opens:
 wait 3
 clear
@@ -232,6 +231,8 @@ DEV_PATH="~/Documents/Development"
 export REPO_PATH
 export DEV_PATH
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
 # ==== alias ====
 # start emacs
 alias e="emacs"
@@ -270,3 +271,7 @@ alias empty="emp2"
 alias emptyall="emp"
 # say hi
 alias hi="say hi"
+# for psql
+alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+
