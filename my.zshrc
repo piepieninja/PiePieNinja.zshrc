@@ -75,6 +75,13 @@ export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 
 source $ZSH/oh-my-zsh.sh
 
+# for mysql databases
+export PATH=${PATH}:/usr/local/mysql/bin
+export MYSQL_HOME=/usr/local/mysql
+
+# Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/.rvm/bin"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -231,8 +238,6 @@ DEV_PATH="~/Documents/Development"
 export REPO_PATH
 export DEV_PATH
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # ==== alias ====
 # start emacs
 alias e="emacs"
@@ -272,6 +277,8 @@ alias emptyall="emp"
 # say hi
 alias hi="say hi"
 # for psql
-alias psqlstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias psqlstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-
+alias start_psql="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias stop_psql="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+# for mysql
+alias start_mysql='sudo $MYSQL_HOME/bin/mysqld_safe &'
+alias stop_mysql='sudo $MYSQL_HOME/bin/mysqladmin shutdown'
