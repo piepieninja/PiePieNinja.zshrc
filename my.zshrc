@@ -116,8 +116,10 @@ screenfetch
 date | lolcat
 cal | lolcat
 #source ~/.zshrc
-#unlimit the stack
+# unlimit the stack
 ulimit -s unlimited
+# source the profile for rvm and other things
+source ~/.profile
 #sleep 5
 
 # ==== shell functions ====
