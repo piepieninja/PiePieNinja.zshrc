@@ -116,6 +116,8 @@ screenfetch
 date | lolcat
 cal | lolcat
 #source ~/.zshrc
+#unlimit the stack
+ulimit -s unlimited
 #sleep 5
 
 # ==== shell functions ====
