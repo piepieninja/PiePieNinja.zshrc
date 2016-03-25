@@ -119,7 +119,7 @@ cal | lolcat
 # unlimit the stack
 ulimit -s unlimited
 # source the profile for rvm and other things
-source ~/.profile
+#source ~/.profile
 #sleep 5
 
 # ==== shell functions ====
@@ -280,6 +280,7 @@ alias empty="emp2"
 alias emptyall="emp"
 # say hi
 alias hi="say hi"
+alias hello="hello"
 # for psql
 alias start_psql="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias stop_psql="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
