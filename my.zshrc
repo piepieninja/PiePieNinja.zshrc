@@ -266,6 +266,8 @@ alias train="say 'choo choo';while true; do; sl; done;"
 alias snow="${REPO_PATH}/scripts/snow.sh"
 # for the lolz
 alias doit="${REPO_PATH}/scripts/JustDoIt.sh"
+# quick RAM check
+alias ram="python ${REPO_PATH}/scripts/memory.py"
 # moves to the dev folder!!!!
 alias dev="cd ~/Documents/Development"
 # shows me the memory!!!
