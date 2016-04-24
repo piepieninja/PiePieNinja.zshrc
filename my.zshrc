@@ -292,3 +292,5 @@ alias stop_mysql='sudo $MYSQL_HOME/bin/mysqladmin shutdown'
 # alias for swift -> because swift is awesome
 alias sw="swift"
 alias swc="swiftc"
+# for sourcing the RVM
+alias rvms="source ~/.rvm/scripts/rvm"
