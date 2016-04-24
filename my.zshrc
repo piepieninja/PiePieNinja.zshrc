@@ -289,3 +289,6 @@ alias stop_psql="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 # for mysql
 alias start_mysql='sudo $MYSQL_HOME/bin/mysqld_safe &'
 alias stop_mysql='sudo $MYSQL_HOME/bin/mysqladmin shutdown'
+# alias for swift -> because swift is awesome
+alias sw="swift"
+alias swc="swiftc"
