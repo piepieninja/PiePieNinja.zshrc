@@ -50,13 +50,8 @@ ZSH_THEME="piepieninja"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git thefuck)
 
 # User configuration
-
-# for python
-export PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin"
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # adds brew to the exports
 export PATH=/usr/local/sbin:$PATH
@@ -64,14 +59,8 @@ export PATH=/usr/local/sbin:$PATH
 # adds export for opengv 
 export MACOSX_RPATH=/Users/calebadams/Documents/Development/OpenSfM/opengv
 
-# for the free pascal compiler - http://www.toosquare.com/2014/07/install-pascal-on-os-x/
-#export PATH=/usr/local/bin:$PATH
-
 # for android adb
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
-
-# for the gmat software
-export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,35 +87,22 @@ fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # this is for LaTex or MacTex or something:
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/
+
 # show this awesome thing every time it opens:
-wait 3
+#wait 3
 clear
 screenfetch
 date | lolcat
 cal | lolcat
+# for docer setup
+#eval "$(docker-machine env dev)"
 #source ~/.zshrc
 # unlimit the stack
 ulimit -s unlimited
 # source the profile for rvm and other things
 #source ~/.profile
-#sleep 5
-
-# ==== shell functions ====
-# for the lolz
-catz () {
-    cat $* | lolcat
-}
 
 emp () {
     # check that Trash is not empty
@@ -255,7 +231,7 @@ alias stats="screenfetch"
 # for safety
 alias rm="rm -i"
 # for the lolz and the catz
-alias cat="catz"
+alias cat="lolcat"
 # clean all the things because I do this all the time
 alias cl="rm *~"
 # bring the pretty things back
