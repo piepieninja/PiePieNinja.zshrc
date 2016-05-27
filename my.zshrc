@@ -91,18 +91,15 @@ fi
 PATH=$PATH:/usr/local/texlive/2014/bin/x86_64-darwin/
 
 # show this awesome thing every time it opens:
-#wait 3
 clear
 screenfetch
 date | lolcat
 cal | lolcat
-# for docer setup
+# for docer setup -ONLY USE SOMETIMES!
+# TODO set some system check so that this only runs when needed
 #eval "$(docker-machine env dev)"
-#source ~/.zshrc
 # unlimit the stack
 ulimit -s unlimited
-# source the profile for rvm and other things
-#source ~/.profile
 
 emp () {
     # check that Trash is not empty
@@ -213,7 +210,7 @@ customsettings () {
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
-DEV_PATH="~/Documents/Development"
+DEV_PATH="/Users/calebadams/Documents/Development"
 # export them all!
 export REPO_PATH
 export DEV_PATH
