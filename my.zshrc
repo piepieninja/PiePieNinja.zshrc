@@ -267,3 +267,7 @@ alias sw="swift"
 alias swc="swiftc"
 # for sourcing the RVM
 alias rvms="source ~/.rvm/scripts/rvm"
+# for easy jeykll serving
+alias jserv="jekyll serve"
+# goes to KSP source
+alias ksp="cd ~/Library/Application\ Support/Steam/SteamApps/common/Kerbal\ Space\ Program"
