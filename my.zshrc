@@ -207,6 +207,17 @@ customsettings () {
 
 }
 
+toggledotfiles (){
+    echo "\nDo you want to show dot files in the finder?"
+    read -r response
+    if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
+	defaults write com.apple.finder AppleShowAllFiles YES
+    else
+	defaults write com.apple.finder AppleShowAllFiles NO
+    fi
+    echo "Great!\nHold the 'Option/alt' key, then right click on the Finder icon in the dock and click Relaunch."
+}
+
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
