@@ -282,3 +282,4 @@ alias rvms="source ~/.rvm/scripts/rvm"
 alias jserv="jekyll serve"
 # goes to KSP source
 alias ksp="cd ~/Library/Application\ Support/Steam/SteamApps/common/Kerbal\ Space\ Program"
+alias appsupport="cd ~/Library/Application\ Support/"
