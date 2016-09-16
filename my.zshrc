@@ -283,3 +283,5 @@ alias jserv="jekyll serve"
 # goes to KSP source
 alias ksp="cd ~/Library/Application\ Support/Steam/SteamApps/common/Kerbal\ Space\ Program"
 alias appsupport="cd ~/Library/Application\ Support/"
+# a quick fix for that bad apple sierra serurity update
+alias fixapps="Sudo spctl --master-disable"
