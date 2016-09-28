@@ -1,4 +1,4 @@
-# Custom GUI and Zshell for Mac OSX 10.10.*
+# Custom GUI and Zshell for Mac OSX and macOS 10.12.*, 10.11.*, and 10.10.* 
 
 #### Tutorials and Posts:
 
