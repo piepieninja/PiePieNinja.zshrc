@@ -285,3 +285,12 @@ alias ksp="cd ~/Library/Application\ Support/Steam/SteamApps/common/Kerbal\ Spac
 alias appsupport="cd ~/Library/Application\ Support/"
 # a quick fix for that bad apple sierra serurity update
 alias fixapps="Sudo spctl --master-disable"
+
+
+##### MY bash rc
+# Setting PATH for Python 3.4
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+export PATH
+export MAKEFLAGS=-j4
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
