@@ -220,8 +220,8 @@ toggledotfiles (){
 
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
-REPO_PATH="/Users/calebadams/Documents/Development/PiePieNinja.zshrc"
-DEV_PATH="/Users/calebadams/Documents/Development"
+REPO_PATH="/Users/calebadams/Development/PiePieNinja.zshrc"
+DEV_PATH="/Users/calebadams/Development"
 # export them all!
 export REPO_PATH
 export DEV_PATH
@@ -253,7 +253,7 @@ alias doit="${REPO_PATH}/scripts/JustDoIt.sh"
 # quick RAM check
 alias ram="python ${REPO_PATH}/scripts/memory.py"
 # moves to the dev folder!!!!
-alias dev="cd ~/Documents/Development"
+alias dev="cd ~/Development"
 # shows me the memory!!!
 # TODO format this to look pretty - build these into functinos
 alias mem="pwd;sudo du -hs"
