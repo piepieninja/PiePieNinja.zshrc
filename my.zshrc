@@ -285,7 +285,8 @@ alias ksp="cd ~/Library/Application\ Support/Steam/SteamApps/common/Kerbal\ Spac
 alias appsupport="cd ~/Library/Application\ Support/"
 # a quick fix for that bad apple sierra serurity update
 alias fixapps="Sudo spctl --master-disable"
-
+# fixes the time. becaue it keeps being wrong.
+alias fixtime="sudo ntpdate -u time.apple.com"
 
 ##### MY bash rc
 # Setting PATH for Python 3.4
