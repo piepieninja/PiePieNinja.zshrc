@@ -63,7 +63,9 @@ $ snow
 
 <i>For 10.12 you need to manually disable <code>SIP</code> to change icons</i>
 
-you need to restart your mac, boot into recovery mode, then open terminal and run:  <code>csrutil enable --without fs</code>
+You need to restart your mac, boot into recovery mode, then open terminal and run:  <code>csrutil enable --without fs</code>
+
+It is reccomended that, after you change your icons, you boot your mac back into recovery mode, then open terminal and run <code>csrutil enable</code> 
 
 
 * [liteicon](https://freemacsoft.net/liteicon/ "lite icon") (brew cask install)
