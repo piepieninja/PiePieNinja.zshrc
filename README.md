@@ -64,7 +64,9 @@ $ snow
 * [liteicon](https://freemacsoft.net/liteicon/ "lite icon") (brew cask install)
 * [cdock](http://sourceforge.net/projects/cdock/ "cdock") (customize your dock)
 * [flavours](http://flavours.interacto.net/ "flavours") (this is the only portion you may have to pay for... )
-* [custom icons](http://noshery.deviantart.com/art/Minimalist-White-Icons-Mac-OS-X-470738808 "Custom Minimal White Icons") (this same artist has many other great icon sets. Additional icons are included in the icons folder.)
+* [white minimal icons](http://noshery.deviantart.com/art/Minimalist-White-Icons-Mac-OS-X-470738808 "Custom Minimal White Icons") (this same artist has many other great icon sets. Additio
+* [Classic Mac icons](https://static1.squarespace.com/static/52dc33c9e4b04f03beae73e2/t/540ea334e4b099e2ef878b43/1410245428617/Macintosh+Classic.zip "Classic Macintosh Icons") (I'm actively looking to source this)
+nal icons are included in the icons folder.)
 
 ### With All Programs Installed:
 #### With the included ruby scripts the terminal prompt will look like this, with a battery and itunes indicator:
@@ -74,6 +76,7 @@ $ snow
 ![windows](/img/windows.png "The Terminal")
 ![the dock](/img/dock.png "The Dock")
 ![windows](/img/finder.png "The Finder")
+
 
 ### Author: Caleb Adams
 #### [CalebDevelops.com](https://calebdevelops.com "CalebDevelops.com")
