@@ -61,6 +61,11 @@ $ snow
 
 ## Need Additional GUI Customization:
 
+<i>For 10.12 you need to manually disable <code>SIP</code> to change icons</i>
+
+you need to restart your mac, boot into recovery mode, then open terminal and run:  <code>csrutil enable --without fs</code>
+
+
 * [liteicon](https://freemacsoft.net/liteicon/ "lite icon") (brew cask install)
 * [cdock](http://sourceforge.net/projects/cdock/ "cdock") (customize your dock)
 * [flavours](http://flavours.interacto.net/ "flavours") (this is the only portion you may have to pay for... )
