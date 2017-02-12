@@ -237,7 +237,7 @@ alias zload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
 # for stats
 alias stats="screenfetch"
 # for safety
-alias rm="rm -i"
+#alias rm="rm -i"
 # for the lolz and the catz
 alias cat="lolcat"
 # clean all the things because I do this all the time
@@ -287,6 +287,9 @@ alias appsupport="cd ~/Library/Application\ Support/"
 alias fixapps="Sudo spctl --master-disable"
 # fixes the time. becaue it keeps being wrong.
 alias fixtime="sudo ntpdate -u time.apple.com"
+# makes conways game of like (which MUST be the screensaver) become my background
+# I used this guys version. Built in OpenGL Shaders: https://mikeash.com/software/gpulife/
+alias life="cd /System/Library/Frameworks/ScreenSaver.framework/Resources;./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background"
 
 ##### MY bash rc
 # Setting PATH for Python 3.4
