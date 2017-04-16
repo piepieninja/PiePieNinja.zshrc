@@ -201,6 +201,9 @@ customsettings () {
     echo "Setting location to ${screenshot_location}"
     defaults write com.apple.screencapture location -string "${screenshot_location}"
 
+    echo "removing that annoying doc jumping..."
+    defaults write com.apple.dock no-bouncing -bool TRUE
+    
     echo "Applying Custom Settings..."
 
     killall SystemUIServer
