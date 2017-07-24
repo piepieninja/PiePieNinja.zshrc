@@ -221,6 +221,11 @@ toggledotfiles (){
     echo "Great!\nHold the 'Option/alt' key, then right click on the Finder icon in the dock and click Relaunch."
 }
 
+yee (){
+    echo "\n    ░░░░░░░░░░░░░▄███▄▄▄░░░░░░░\n    ░░░░░░░░░▄▄▄██▀▀▀▀███▄░░░░░\n    ░░░░░░░▄▀▀░░░░░░░░░░░▀█░░░░\n    ░░░░▄▄▀░░░░░░░░░░░░░░░▀█░░░\n    ░░░█░░░░░▀▄░░▄▀░░░░░░░░█░░░\n    ░░░▐██▄░░▀▄▀▀▄▀░░▄██▀░▐▌░░░\n    ░░░█▀█░▀░░░▀▀░░░▀░█▀░░▐▌░░░\n    ░░░█░░▀▐░░░░░░░░▌▀░░░░░█░░░\n    ░░░█░░░░░░░░░░░░░░░░░░░█░░░\n    ░░░░█░░▀▄░░░░▄▀░░░░░░░░█░░░\n    ░░░░█░░░░░░░░░░░▄▄░░░░█░░░░\n    ░░░░░█▀██▀▀▀▀██▀░░░░░░█░░░░\n    ░░░░░█░░▀████▀░░░░░░░█░░░░░\n    ░░░░░░█░░░░░░░░░░░░▄█░░░░░░\n    ░░░░░░░██░░░░░█▄▄▀▀░█░░░░░░\n    ░░░░░░░░▀▀█▀▀▀▀░░░░░░█░░░░░\n    ░░░░░░░░░█░░░░░░░░░░░░█░░░░"
+    echo "YEE"
+}
+
 # ==== Custom Variables ====
 # change this path so that it points to the git repository
 REPO_PATH="/Users/calebadams/Development/PiePieNinja.zshrc"
@@ -262,6 +267,7 @@ alias dev="cd ~/Development"
 alias mem="pwd;sudo du -hs"
 alias umem="sudo df -h /"
 alias hmem="sudo df -h /;echo "SYSTEM" | lolcat; sudo du -sh /*;echo "USER" | lolcat; sudo du -sh ~/*"
+alias rmem="pwd; sudo du -sh *"
 # the thing that updates my .zshrc and pushes it to my github!
 alias zpush="${REPO_PATH}/scripts/update.zsh"
 # for nicely emptying out all the stuff that I don't want - build these into functions
@@ -293,6 +299,8 @@ alias fixtime="sudo ntpdate -u time.apple.com"
 # makes conways game of like (which MUST be the screensaver) become my background
 # I used this guys version. Built in OpenGL Shaders: https://mikeash.com/software/gpulife/
 alias life="cd /System/Library/Frameworks/ScreenSaver.framework/Resources;./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background"
+# because I don't like them errors
+alias python=/usr/local/bin/python
 
 ##### MY bash rc
 # Setting PATH for Python 3.4
