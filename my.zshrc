@@ -64,6 +64,10 @@ export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 
 source $ZSH/oh-my-zsh.sh
 
+# for CUDA programming
+export PATH=/Developer/NVIDIA/CUDA-8.0/bin${PATH:+:${PATH}}
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib\${DYLD_LIBRARY_PATH:+:${DYLD_LIBRARY_PATH}}
+
 # for mysql databases
 export PATH=${PATH}:/usr/local/mysql/bin
 export MYSQL_HOME=/usr/local/mysql
