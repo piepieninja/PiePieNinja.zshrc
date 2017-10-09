@@ -103,7 +103,7 @@ cal | lolcat
 # TODO set some system check so that this only runs when needed
 #eval "$(docker-machine env dev)"
 # unlimit the stack
-ulimit -s unlimited
+#ulimit -s unlimited
 
 emp () {
     # check that Trash is not empty
@@ -304,7 +304,9 @@ alias fixtime="sudo ntpdate -u time.apple.com"
 # I used this guys version. Built in OpenGL Shaders: https://mikeash.com/software/gpulife/
 alias life="cd /System/Library/Frameworks/ScreenSaver.framework/Resources;./ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background"
 # because I don't like them errors
-alias python=/usr/local/bin/python
+alias python=/usr/local/Cellar/python/2.7.14/bin/python2
+alias pip=/usr/local/Cellar/python/2.7.14/bin/pip
+alias pypath="echo "/usr/local/Cellar/python/2.7.14/bin/""
 
 ##### MY bash rc
 # Setting PATH for Python 3.4
