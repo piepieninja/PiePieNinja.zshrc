@@ -1,4 +1,4 @@
-<span style="color:red">DEPRICATED AS OF MAY 2018</span>
+# <span style="color:red">DEPRICATED AS OF MAY 2018</span>
 
 # Custom GUI and Zshell for Mac OSX and macOS 10.12.\*, 10.11.\*, and 10.10.* 
 
